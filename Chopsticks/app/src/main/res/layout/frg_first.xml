@@ -12,23 +12,38 @@
         android:id="@+id/txt_first_rfid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="188dp"
-        android:layout_marginTop="419dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="410dp"
         android:text="RFID : "
         android:textColor="@color/color_primaryText"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="125dp" />
 
     <TextView
-        android:id="@+id/txt_first_progress3"
+        android:id="@+id/txt_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="430dp"
+        android:text="站別："
+        android:textColor="@color/color_primaryText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="125dp" />
+
+
+    <TextView
+        android:id="@+id/txt_first_progress1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="402dp"
-        android:text="上膠進度：0/144"
+        android:text="進料進度：0/144"
         android:textColor="@color/color_primaryText"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp" />
 
     <TextView
         android:id="@+id/txt_first_progress2"
@@ -39,148 +54,164 @@
         android:text="倒角進度：0/144"
         android:textColor="@color/color_primaryText"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp" />
 
     <TextView
-        android:id="@+id/txt_first_progress1"
+        android:id="@+id/txt_first_progress3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="436dp"
-        android:text="進料進度：0/144"
+        android:text="上膠進度：0/144"
         android:textColor="@color/color_primaryText"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp" />
 
     <ImageView
         android:id="@+id/img_small"
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:srcCompat="@drawable/small"
-        tools:layout_editor_absoluteY="10dp"
-        tools:layout_editor_absoluteX="155dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="95dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="95dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_deform"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="155dp"
+        android:layout_marginLeft="95dp"
         android:layout_marginTop="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/deform" />
+        app:srcCompat="@drawable/deform"
+        android:layout_marginStart="95dp" />
 
     <ImageView
         android:id="@+id/img_nonfinish_1"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="279dp"
-        android:layout_marginTop="-80dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="190dp" />
 
     <TextView
         android:id="@+id/txt_nonfinsh_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="100dp"
         android:layout_marginTop="30dp"
         android:text="未進料"
         android:textColor="@color/color_primaryText"
         android:textSize="16sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="100dp" />
 
     <TextView
         android:id="@+id/txt_middle"
         android:layout_width="64dp"
         android:layout_height="19dp"
-        android:layout_marginRight="215dp"
+        android:layout_marginRight="270dp"
         android:layout_marginTop="10dp"
         android:text="孔徑適中"
         android:textColor="@color/color_primaryText"
         android:textSize="16sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="270dp" />
 
     <ImageView
         android:id="@+id/img_middle_1"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="48dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/normal" />
+        app:srcCompat="@drawable/normal"
+        android:layout_marginStart="5dp" />
 
     <TextView
         android:id="@+id/txt_small"
-        android:layout_width="wrap_content"
+        android:layout_width="64dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="110dp"
+        android:layout_marginRight="177dp"
         android:layout_marginTop="10dp"
         android:text="孔徑過小"
         android:textColor="@color/color_primaryText"
         android:textSize="16sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="177dp" />
 
     <TextView
         android:id="@+id/txt_deform"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="110dp"
+        android:layout_marginRight="177dp"
         android:layout_marginTop="32dp"
         android:text="孔徑變形"
         android:textColor="@color/color_primaryText"
         android:textSize="16sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="177dp" />
 
     <TextView
         android:id="@+id/txt_big"
-        android:layout_width="wrap_content"
+        android:layout_width="64dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="215dp"
+        android:layout_marginRight="270dp"
         android:layout_marginTop="32dp"
         android:text="孔徑過大"
         android:textColor="@color/color_primaryText"
         android:textSize="16sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="270dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:text="無筷子"
         android:textColor="@color/color_primaryText"
         android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginRight="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="100dp" />
 
     <ImageView
         android:id="@+id/img_nothing"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="265dp"
+        android:layout_marginLeft="190dp"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/no_chopsticks" />
+        app:srcCompat="@drawable/no_chopsticks"
+        android:layout_marginStart="190dp" />
 
     <ImageView
         android:id="@+id/img_big"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="48dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/big" />
+        app:srcCompat="@drawable/big"
+        android:layout_marginStart="5dp" />
 
     <ImageView
         android:id="@+id/img_background"
@@ -190,7 +221,30 @@
         android:layout_marginTop="52dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background" />
+        app:srcCompat="@drawable/background"
+        android:layout_marginEnd="5dp" />
+
+    <ImageView
+        android:id="@+id/img_chamfere"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/chamfere"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="265dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="265dp" />
+
+    <ImageView
+        android:id="@+id/img_glue"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/glue"
+        android:layout_marginStart="265dp" />
 
 
     <ImageView
@@ -201,7 +255,36 @@
         android:layout_marginTop="341dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
+
+
+    <TextView
+        android:id="@+id/txt_chamfere"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:text="倒角完成"
+        android:textColor="@color/color_primaryText"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="7dp" />
+
+    <TextView
+        android:id="@+id/txt_glue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="32dp"
+        android:text="上膠完成"
+        android:textColor="@color/color_primaryText"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="7dp" />
+
 
     <ImageView
         android:id="@+id/img_x1_y12_1"
@@ -211,7 +294,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y12_1"
@@ -221,7 +305,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y12_1"
@@ -231,7 +316,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y12_1"
@@ -241,7 +327,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y12_1"
@@ -251,7 +338,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y12_1"
@@ -261,7 +349,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y12_1"
@@ -271,7 +360,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x9_y12_1"
@@ -281,7 +371,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y12_1"
@@ -291,7 +382,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y12_1"
@@ -301,7 +393,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y12_1"
@@ -311,7 +404,8 @@
         android:layout_marginTop="341dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y11_1"
@@ -321,7 +415,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y11_1"
@@ -331,7 +426,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y11_1"
@@ -341,7 +437,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x5_y11_1"
@@ -351,7 +448,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y11_1"
@@ -361,7 +459,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y11_1"
@@ -371,7 +470,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y11_1"
@@ -381,7 +481,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y11_1"
@@ -391,7 +492,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y11_1"
@@ -401,7 +503,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y11_1"
@@ -411,7 +514,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y11_1"
@@ -421,7 +525,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y10_1"
@@ -431,7 +536,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y10_1"
@@ -441,7 +547,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y10_1"
@@ -451,7 +558,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y10_1"
@@ -461,7 +569,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y10_1"
@@ -471,7 +580,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y10_1"
@@ -481,7 +591,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y10_1"
@@ -491,7 +602,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/blank"
         android:layout_marginRight="155dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y10_1"
@@ -501,7 +613,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y10_1"
@@ -511,7 +624,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y10_1"
@@ -521,7 +635,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y10_1"
@@ -531,7 +646,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y10_1"
@@ -541,7 +657,8 @@
         android:layout_marginTop="295dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y9_1"
@@ -551,7 +668,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y9_1"
@@ -561,7 +679,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y9_1"
@@ -571,7 +690,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y9_1"
@@ -581,7 +701,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y9_1"
@@ -591,7 +712,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y9_1"
@@ -601,7 +723,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y9_1"
@@ -611,7 +734,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y9_1"
@@ -621,7 +745,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y9_1"
@@ -631,7 +756,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y9_1"
@@ -641,7 +767,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y9_1"
@@ -651,7 +778,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y9_1"
@@ -661,7 +789,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y8_1"
@@ -671,7 +800,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y8_1"
@@ -681,7 +811,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y8_1"
@@ -691,7 +822,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y8_1"
@@ -701,7 +833,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y8_1"
@@ -711,7 +844,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y8_1"
@@ -721,7 +855,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y8_1"
@@ -731,7 +866,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y8_1"
@@ -741,7 +877,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y8_1"
@@ -751,7 +888,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y8_1"
@@ -761,7 +899,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y8_1"
@@ -771,7 +910,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y8_1"
@@ -781,7 +921,8 @@
         android:layout_marginTop="249dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y7_1"
@@ -791,7 +932,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y7_1"
@@ -801,7 +943,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y7_1"
@@ -811,7 +954,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y7_1"
@@ -821,7 +965,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y7_1"
@@ -831,7 +976,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y7_1"
@@ -841,7 +987,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y7_1"
@@ -851,7 +998,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y7_1"
@@ -861,7 +1009,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y7_1"
@@ -871,7 +1020,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y7_1"
@@ -881,7 +1031,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y7_1"
@@ -891,7 +1042,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x4_y11_1"
@@ -901,7 +1053,8 @@
         android:layout_marginTop="318dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x12_y7_1"
@@ -911,7 +1064,8 @@
         android:layout_marginTop="226dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
 
 
@@ -925,7 +1079,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x1_y6_1"
@@ -935,7 +1090,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y6_1"
@@ -945,7 +1101,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y6_1"
@@ -955,7 +1112,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y6_1"
@@ -965,7 +1123,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y6_1"
@@ -975,7 +1134,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y6_1"
@@ -985,7 +1145,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y6_1"
@@ -995,7 +1156,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x9_y6_1"
@@ -1005,7 +1167,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y6_1"
@@ -1015,7 +1178,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y6_1"
@@ -1025,7 +1189,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y6_1"
@@ -1035,7 +1200,8 @@
         android:layout_marginTop="203dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y5_1"
@@ -1045,7 +1211,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y5_1"
@@ -1055,7 +1222,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y5_1"
@@ -1065,7 +1233,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x5_y5_1"
@@ -1075,7 +1244,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y5_1"
@@ -1085,7 +1255,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y5_1"
@@ -1095,7 +1266,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y5_1"
@@ -1105,7 +1277,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y5_1"
@@ -1115,7 +1288,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y5_1"
@@ -1125,7 +1299,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y5_1"
@@ -1135,7 +1310,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y5_1"
@@ -1145,7 +1321,8 @@
         android:layout_marginTop="180dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y4_1"
@@ -1155,7 +1332,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y4_1"
@@ -1165,7 +1343,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y4_1"
@@ -1175,7 +1354,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y4_1"
@@ -1185,7 +1365,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y4_1"
@@ -1195,7 +1376,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y4_1"
@@ -1205,7 +1387,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y4_1"
@@ -1215,7 +1398,8 @@
         app:srcCompat="@drawable/blank"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="155dp" />
+        android:layout_marginRight="155dp"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y4_1"
@@ -1225,7 +1409,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y4_1"
@@ -1235,7 +1420,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y4_1"
@@ -1245,7 +1431,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y4_1"
@@ -1255,7 +1442,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y4_1"
@@ -1265,7 +1453,8 @@
         android:layout_marginTop="157dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y3_1"
@@ -1275,7 +1464,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y3_1"
@@ -1285,7 +1475,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y3_1"
@@ -1295,7 +1486,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y3_1"
@@ -1305,7 +1497,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y3_1"
@@ -1315,7 +1508,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y3_1"
@@ -1325,7 +1519,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y3_1"
@@ -1335,7 +1530,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y3_1"
@@ -1345,7 +1541,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y3_1"
@@ -1355,7 +1552,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y3_1"
@@ -1365,7 +1563,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y3_1"
@@ -1375,7 +1574,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y3_1"
@@ -1385,7 +1585,8 @@
         android:layout_marginTop="134dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y2_1"
@@ -1395,7 +1596,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y2_1"
@@ -1405,7 +1607,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y2_1"
@@ -1415,7 +1618,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y2_1"
@@ -1425,7 +1629,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y2_1"
@@ -1435,7 +1640,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y2_1"
@@ -1445,7 +1651,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y2_1"
@@ -1455,7 +1662,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y2_1"
@@ -1465,7 +1673,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y2_1"
@@ -1475,7 +1684,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y2_1"
@@ -1485,7 +1695,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y2_1"
@@ -1495,7 +1706,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y2_1"
@@ -1505,7 +1717,8 @@
         android:layout_marginTop="111dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x1_y1_1"
@@ -1515,7 +1728,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="45dp" />
 
     <ImageView
         android:id="@+id/img_x2_y1_1"
@@ -1525,7 +1739,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="68dp" />
 
     <ImageView
         android:id="@+id/img_x3_y1_1"
@@ -1535,7 +1750,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="91dp" />
 
     <ImageView
         android:id="@+id/img_x4_y1_1"
@@ -1545,7 +1761,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
 
     <ImageView
         android:id="@+id/img_x5_y1_1"
@@ -1555,7 +1772,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="137dp" />
 
     <ImageView
         android:id="@+id/img_x6_y1_1"
@@ -1565,7 +1783,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="160dp" />
 
     <ImageView
         android:id="@+id/img_x7_y1_1"
@@ -1575,7 +1794,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="155dp" />
 
     <ImageView
         android:id="@+id/img_x8_y1_1"
@@ -1585,7 +1805,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="132dp" />
 
     <ImageView
         android:id="@+id/img_x9_y1_1"
@@ -1595,7 +1816,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="109dp" />
 
     <ImageView
         android:id="@+id/img_x10_y1_1"
@@ -1605,7 +1827,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="86dp" />
 
     <ImageView
         android:id="@+id/img_x11_y1_1"
@@ -1615,7 +1838,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="63dp" />
 
     <ImageView
         android:id="@+id/img_x12_y1_1"
@@ -1625,7 +1849,8 @@
         android:layout_marginTop="88dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginEnd="40dp" />
 
     <ImageView
         android:id="@+id/img_x4_y5_1"
@@ -1635,6 +1860,30 @@
         android:layout_marginTop="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank" />
+        app:srcCompat="@drawable/blank"
+        android:layout_marginStart="114dp" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:text="取得資料"
+        android:layout_marginLeft="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="200dp" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="410dp"
+        android:text="停止"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>

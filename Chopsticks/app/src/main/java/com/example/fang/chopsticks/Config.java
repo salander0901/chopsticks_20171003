@@ -5,15 +5,12 @@ package com.example.fang.chopsticks;
  */
 
 public class Config {
-    public static final String URL_LOCATION1="http://140.125.49.210/chopsticks/station1";
-    public static final String URL_LOCATION2="http://140.125.49.210/chopsticks/station2";
-    public static final String URL_LOCATION3="http://140.125.49.210/chopsticks/station3";
+    public static final String URL_LOCATION="http://140.125.49.210/chopsticks/station1";
 
     //JSON Tags
     public static final String TAG_JSON_ARRAY1="result1";
-    public static final String TAG_JSON_ARRAY2="result2";
-    public static final String TAG_JSON_ARRAY3="result3";
     public static final String RFID="RFID";
+    public static final String STATION="station";
     public static final String xy[] ={"x1_y1", "x1_y2", "x1_y3", "x1_y4", "x1_y5", "x1_y6", "x1_y7", "x1_y8", "x1_y9", "x1_y10", "x1_y11", "x1_y12",
                                     "x2_y1", "x2_y2", "x2_y3", "x2_y4", "x2_y5", "x2_y6", "x2_y7", "x2_y8", "x2_y9", "x2_y10", "x2_y11", "x2_y12",
                                     "x3_y1", "x3_y2", "x3_y3", "x3_y4", "x3_y5", "x3_y6", "x3_y7", "x3_y8", "x3_y9", "x3_y10", "x3_y11", "x3_y12",

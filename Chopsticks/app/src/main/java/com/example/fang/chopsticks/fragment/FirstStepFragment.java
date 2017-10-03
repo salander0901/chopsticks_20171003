@@ -6,8 +6,10 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fang.chopsticks.Config;
 import com.example.fang.chopsticks.R;
@@ -31,6 +33,7 @@ public class FirstStepFragment extends BaseFragment{
     private String JSON_STRING3;
     private ImageView[] img;
     private TextView[] progress;
+    private Button start_connected;
     private Handler handler = new Handler();
 
 
@@ -64,6 +67,7 @@ public class FirstStepFragment extends BaseFragment{
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        start_connected = (Button)view.findViewById(R.id.button_start);
         ImageView img_x1_y1 = (ImageView)view.findViewById(R.id.img_x1_y1_1);
         ImageView img_x1_y2 = (ImageView)view.findViewById(R.id.img_x1_y2_1);
         ImageView img_x1_y3 = (ImageView)view.findViewById(R.id.img_x1_y3_1);
@@ -212,6 +216,7 @@ public class FirstStepFragment extends BaseFragment{
         TextView progress2 = (TextView)view.findViewById(R.id.txt_first_progress2);
         TextView progress3 = (TextView)view.findViewById(R.id.txt_first_progress3);
         TextView rfid = (TextView)view.findViewById(R.id.txt_first_rfid);
+        TextView station = (TextView)view.findViewById(R.id.txt_station);
         img = new ImageView[]{img_x1_y1, img_x1_y2, img_x1_y3, img_x1_y4, img_x1_y5, img_x1_y6, img_x1_y7, img_x1_y8, img_x1_y9, img_x1_y10, img_x1_y11, img_x1_y12,
                 img_x2_y1, img_x2_y2, img_x2_y3, img_x2_y4, img_x2_y5, img_x2_y6, img_x2_y7, img_x2_y8, img_x2_y9, img_x2_y10, img_x2_y11, img_x2_y12,
                 img_x3_y1, img_x3_y2, img_x3_y3, img_x3_y4, img_x3_y5, img_x3_y6, img_x3_y7, img_x3_y8, img_x3_y9, img_x3_y10, img_x3_y11, img_x3_y12,
@@ -224,7 +229,7 @@ public class FirstStepFragment extends BaseFragment{
                 img_x10_y1, img_x10_y2, img_x10_y3, img_x10_y4, img_x10_y5, img_x10_y6, img_x10_y7, img_x10_y8, img_x10_y9, img_x10_y10, img_x10_y11, img_x10_y12,
                 img_x11_y1, img_x11_y2, img_x11_y3, img_x11_y4, img_x11_y5, img_x11_y6, img_x11_y7, img_x11_y8, img_x11_y9, img_x11_y10, img_x11_y11, img_x11_y12,
                 img_x12_y1, img_x12_y2, img_x12_y3, img_x12_y4, img_x12_y5, img_x12_y6, img_x12_y7, img_x12_y8, img_x12_y9, img_x12_y10, img_x12_y11, img_x12_y12};
-        progress = new TextView[]{progress1,progress2,progress3,rfid};
+        progress = new TextView[]{progress1,progress2,progress3,rfid,station};
     }
 
     @Override
@@ -235,7 +240,13 @@ public class FirstStepFragment extends BaseFragment{
     @Override
     public void onStart() {
         super.onStart();
-        handler.postDelayed(update, 10);
+        start_connected.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handler.postDelayed(update, 10);
+                start_connected.setEnabled(false);
+            }
+        });
     }
 
     @Override
@@ -251,13 +262,11 @@ public class FirstStepFragment extends BaseFragment{
 
     private Runnable update = new Runnable() {
         public void run() {
-            getStation1();
-            getStation2();
-            getStation3();
+            getStation();
             handler.postDelayed(this, 1000);
         }
     };
-    private void getStation1() {
+    private void getStation() {
         class GetJSON extends AsyncTask<Void, Void, String> {
             @Override
             protected void onPreExecute() {
@@ -268,7 +277,7 @@ public class FirstStepFragment extends BaseFragment{
             @Override
             protected String doInBackground(Void... params) {
                 RequestHandler rh = new RequestHandler();
-                String s = rh.sendGetRequest(Config.URL_LOCATION1);
+                String s = rh.sendGetRequest(Config.URL_LOCATION);
                 return s;
             }
             /*獲得字串之後呼叫更新圖片的function*/
@@ -276,64 +285,15 @@ public class FirstStepFragment extends BaseFragment{
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 JSON_STRING = s;
-                showProgress1();
-            }
-        }
-        GetJSON gj = new GetJSON();
-        gj.execute();
-    }
-    private void getStation2() {
-        class GetJSON extends AsyncTask<Void, Void, String> {
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                //loading = ProgressDialog.show(MainActivity.this, "Fetching Data", "Wait...", false, false);
-            }
-            /*背景執行獲取字串*/
-            @Override
-            protected String doInBackground(Void... params) {
-                RequestHandler rh = new RequestHandler();
-                String s2 = rh.sendGetRequest(Config.URL_LOCATION2);
-                return s2;
-            }
-            /*獲得字串之後呼叫更新圖片的function*/
-            @Override
-            protected void onPostExecute(String s2) {
-                super.onPostExecute(s2);
-                JSON_STRING2 = s2;
-                showProgress2();
-            }
-        }
-        GetJSON gj = new GetJSON();
-        gj.execute();
-    }
-    private void getStation3() {
-        class GetJSON extends AsyncTask<Void, Void, String> {
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                //loading = ProgressDialog.show(MainActivity.this, "Fetching Data", "Wait...", false, false);
-            }
-            /*背景執行獲取字串*/
-            @Override
-            protected String doInBackground(Void... params) {
-                RequestHandler rh = new RequestHandler();
-                String s3 = rh.sendGetRequest(Config.URL_LOCATION3);
-                return s3;
-            }
-            /*獲得字串之後呼叫更新圖片的function*/
-            @Override
-            protected void onPostExecute(String s3) {
-                super.onPostExecute(s3);
-                JSON_STRING3 = s3;
-                showProgress3();
+                showProgress();
             }
         }
         GetJSON gj = new GetJSON();
         gj.execute();
     }
 
-    private void showProgress1() {
+
+    private void showProgress() {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject(JSON_STRING);
@@ -342,63 +302,35 @@ public class FirstStepFragment extends BaseFragment{
             
             int i;
             int step1=0;
+            int step2=0;
+            int step3=0;
             /*將回傳的JSON字串丟至矩陣+換圖*/
             for(i=0;i<=143;i++)
             {
                 JSONObject jo = result.getJSONObject(i);
                 state[i] = Integer.parseInt(jo.getString(Config.xy[i]));
-                if(state[i] == 1) step1++;
                 img[i].setImageResource(R.drawable.change);
                 img[i].setImageLevel(state[i]);
+                if( i==0 && state[i]==0)
+                {
+                    Toast.makeText(getActivity(), "請開啟光學儀器檢測", Toast.LENGTH_SHORT).show();
+                    handler.removeCallbacks(update);
+                    start_connected.setEnabled(true);
+                }
+                if(state[i] <5 && state[i] >=1 ) step1++;
+                if(state[i] ==6 ) step2++;
+                if(state[i] ==7 ) step3++;
+
             }
             JSONObject jo = result.getJSONObject(144);
             String rfid = jo.getString(Config.RFID);
-            progress[3].setText("RFID : "+rfid);
+            jo = result.getJSONObject(145);
+            String station =  Integer.toString(Integer.parseInt(jo.getString(Config.STATION))/10);
             progress[0].setText("進料進度："+step1+"/144");
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void showProgress2() {
-        JSONObject jsonObject2 = null;
-        try {
-            jsonObject2 = new JSONObject(JSON_STRING2);
-            JSONArray result2 = jsonObject2.getJSONArray(Config.TAG_JSON_ARRAY2);
-            int state2[] = new int[144];
-            int i;
-            int step2=0;
-            /*將回傳的JSON字串丟至int陣列+計算多少已完成*/
-            for(i=0;i<=143;i++)
-            {
-                JSONObject jo = result2.getJSONObject(i);
-                state2[i] = Integer.parseInt(jo.getString(Config.xy[i]));
-                if(state2[i] == 4) step2++;
-            }
             progress[1].setText("倒角進度："+step2+"/144");
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void showProgress3() {
-        JSONObject jsonObject3 = null;
-        try {
-            jsonObject3 = new JSONObject(JSON_STRING3);
-            JSONArray result3 = jsonObject3.getJSONArray(Config.TAG_JSON_ARRAY3);
-            int state3[] = new int[144];
-            int i;
-            int step3=0;
-            /*將回傳的JSON字串丟至int陣列+換圖*/
-            for(i=0;i<=143;i++)
-            {
-                JSONObject jo = result3.getJSONObject(i);
-                state3[i] = Integer.parseInt(jo.getString(Config.xy[i]));
-                if(state3[i] == 5) step3++;
-            }
             progress[2].setText("上膠進度："+step3+"/144");
+            progress[3].setText("RFID : "+rfid);
+            progress[4].setText("站別 : "+station);
 
         } catch (JSONException e) {
             e.printStackTrace();

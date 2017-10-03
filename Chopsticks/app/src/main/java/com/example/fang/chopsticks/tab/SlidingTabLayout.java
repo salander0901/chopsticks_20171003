@@ -185,7 +185,8 @@ public class SlidingTabLayout extends HorizontalScrollView {
     private void populateTabStrip() {
         final PagerAdapter adapter = mViewPager.getAdapter();
         final View.OnClickListener tabClickListener = new TabClickListener();
-        final int w = getResources().getDisplayMetrics().widthPixels/3;
+        //  widthPixels/3 = 一個tab的寬度是螢幕寬度/3
+        final int w = getResources().getDisplayMetrics().widthPixels/2;
 
         for (int i = 0; i < adapter.getCount(); i++) {
             View tabView = null;

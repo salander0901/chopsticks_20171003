@@ -68,8 +68,8 @@ public class TabFragment extends Fragment {
 
         LinkedList<BaseFragment> fragments = new LinkedList<BaseFragment>();
         fragments.add(FirstStepFragment.newInstance("進料", indicatorColor, dividerColor));
-        fragments.add(SecondStepFragment.newInstance("倒角", indicatorColor, dividerColor));
-        fragments.add(ThirdStepFragment.newInstance("上膠", indicatorColor, dividerColor));
+      //  fragments.add(SecondStepFragment.newInstance("倒角", indicatorColor, dividerColor));
+       // fragments.add(ThirdStepFragment.newInstance("上膠", indicatorColor, dividerColor));
         return fragments;
     }
 }
