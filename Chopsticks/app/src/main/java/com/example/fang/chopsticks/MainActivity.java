@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("環保筷子製具即時監控");
+        actionBar.setTitle("環保筷製具即時監控");
     }
 
     private void initTabFragment(Bundle savedInstanceState){

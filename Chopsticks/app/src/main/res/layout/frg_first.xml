@@ -1864,15 +1864,15 @@
         android:layout_marginStart="114dp" />
 
     <Button
-        android:id="@+id/button_start"
+        android:id="@+id/btn_start"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:text="取得資料"
         android:layout_marginLeft="200dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="410dp"
-        android:layout_marginStart="200dp" />
+        android:text="取得資料"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_stop"

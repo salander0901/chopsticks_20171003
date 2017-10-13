@@ -29,11 +29,10 @@ public class FirstStepFragment extends BaseFragment{
     private static final String DATA_NAME = "name";
     private String title = "";
     private String JSON_STRING;
-    private String JSON_STRING2;
-    private String JSON_STRING3;
     private ImageView[] img;
     private TextView[] progress;
-    private Button start_connected;
+    private String station;
+    private Button start_connected,stop_connected;
     private Handler handler = new Handler();
 
 
@@ -67,7 +66,8 @@ public class FirstStepFragment extends BaseFragment{
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        start_connected = (Button)view.findViewById(R.id.button_start);
+        start_connected = (Button)view.findViewById(R.id.btn_start);
+        stop_connected = (Button)view.findViewById(R.id.btn_stop);
         ImageView img_x1_y1 = (ImageView)view.findViewById(R.id.img_x1_y1_1);
         ImageView img_x1_y2 = (ImageView)view.findViewById(R.id.img_x1_y2_1);
         ImageView img_x1_y3 = (ImageView)view.findViewById(R.id.img_x1_y3_1);
@@ -240,11 +240,21 @@ public class FirstStepFragment extends BaseFragment{
     @Override
     public void onStart() {
         super.onStart();
+        stop_connected.setEnabled(false);
         start_connected.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 handler.postDelayed(update, 10);
                 start_connected.setEnabled(false);
+                stop_connected.setEnabled(true);
+            }
+        });
+        stop_connected.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handler.removeCallbacks(update);
+                start_connected.setEnabled(true);
+                stop_connected.setEnabled(false);
             }
         });
     }
@@ -263,7 +273,7 @@ public class FirstStepFragment extends BaseFragment{
     private Runnable update = new Runnable() {
         public void run() {
             getStation();
-            handler.postDelayed(this, 1000);
+            handler.postDelayed(this, 500);
         }
     };
     private void getStation() {
@@ -308,24 +318,43 @@ public class FirstStepFragment extends BaseFragment{
             for(i=0;i<=143;i++)
             {
                 JSONObject jo = result.getJSONObject(i);
-                state[i] = Integer.parseInt(jo.getString(Config.xy[i]));
-                img[i].setImageResource(R.drawable.change);
-                img[i].setImageLevel(state[i]);
-                if( i==0 && state[i]==0)
+                if(jo.getString(Config.xy[i]).equals("null"))
                 {
-                    Toast.makeText(getActivity(), "請開啟光學儀器檢測", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "無資料，請確認儀器狀態", Toast.LENGTH_SHORT).show();
                     handler.removeCallbacks(update);
                     start_connected.setEnabled(true);
+                    stop_connected.setEnabled(false);
+                    break;
+                }
+                else if(Integer.parseInt(jo.getString(Config.xy[i]))<=7 && Integer.parseInt(jo.getString(Config.xy[i]))>0)
+                {
+                    state[i] = Integer.parseInt(jo.getString(Config.xy[i]));
+                    img[i].setImageResource(R.drawable.change);
+                    img[i].setImageLevel(state[i]);
+                    if(state[i]==0 || state[i]>7)
+                    {
+                        Toast.makeText(getActivity(), "資料為0，請再嘗試", Toast.LENGTH_SHORT).show();
+                        handler.removeCallbacks(update);
+                        start_connected.setEnabled(true);
+                        stop_connected.setEnabled(false);
+                        break;
+                    }
+                }
+                else/*預期之外的值*/
+                {
+
                 }
                 if(state[i] <5 && state[i] >=1 ) step1++;
                 if(state[i] ==6 ) step2++;
                 if(state[i] ==7 ) step3++;
-
             }
             JSONObject jo = result.getJSONObject(144);
             String rfid = jo.getString(Config.RFID);
             jo = result.getJSONObject(145);
-            String station =  Integer.toString(Integer.parseInt(jo.getString(Config.STATION))/10);
+            if(!jo.getString(Config.STATION).equals("null"))
+            {
+                station =  Integer.toString(Integer.parseInt(jo.getString(Config.STATION))/10);
+            }
             progress[0].setText("進料進度："+step1+"/144");
             progress[1].setText("倒角進度："+step2+"/144");
             progress[2].setText("上膠進度："+step3+"/144");
